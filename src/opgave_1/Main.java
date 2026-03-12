@@ -1,28 +1,22 @@
 package opgave_1;
 
 public class Main {
+    MediaPlayer mediaplayer = new MediaPlayer();
 
     void main(){
-        MediaPlayer mediaplayer = new MediaPlayer();
 
-        Podcast podcast = new Podcast("Starter forfra","Olga", 100 );
-
-        Song song = new Song("Creep","RadioHead",238);
-
-        AudioBook audiobook = new AudioBook("Harry Potter", "J.K. Rowling", 8000);
-
-        mediaplayer.add(podcast);
+        mediaplayer.mediaPlayerGenerator();
 
         mediaplayer.printPlaylist();
+        System.out.println();
+        mediaplayer.playAll();
 
+        Podcast podcast = new Podcast("S-town", "Serial", 23040);
+        podcast.playTimeLongFormat();
 
-        podcast.play();
-        song.play();
-        audiobook.play();
+        Song song = new Song ("Creep",238,"RadioHead");
 
-
-
-
+        song.playTimeSong();
 
 
 
