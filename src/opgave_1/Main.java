@@ -16,7 +16,7 @@ public class Main {
 
         Song song = new Song ("Creep",238,"RadioHead");
 
-        song.playTimeSong();
+        mediaplayer.print();
 
 
 

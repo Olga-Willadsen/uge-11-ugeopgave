@@ -9,19 +9,11 @@ public class Song extends MediaItem implements Playable {
         this.artist=artist;
     }
 @Override
-    public boolean playTimeSong (){
+    public void playTimeSong (){
         int minutes = (durationSeconds/60);
         int seconds = durationSeconds-(minutes*60);
         System.out.println(minutes+" : "+seconds);
-    return false;
 }
-
-
-//    Song (String title, String artist, int durationSeconds){
-//        this.title=title;
-//        this.artist=artist;
-//        this.durationSeconds=durationSeconds;
-//    }
 
     @Override
     public void play() {
@@ -29,8 +21,7 @@ public class Song extends MediaItem implements Playable {
     }
 
     @Override
-    public boolean playTimeLongFormat() {
-        return false;
+    public void playTimeLongFormat() {
     }
 
 

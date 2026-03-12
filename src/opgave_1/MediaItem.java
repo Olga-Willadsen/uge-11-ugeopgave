@@ -23,27 +23,6 @@ public abstract class MediaItem {
     }
 
 
-
-//    public void playTimeLongFormat (){
-//        int hours = (this.durationSeconds/60)/60; //23040 / 60 = 384, 384/6 = 6,4
-//        int minutes = (this.durationSeconds/60)-(hours*60); //384 - 6*60 360= 24
-//        int seconds = (this.durationSeconds-(minutes*60))-((hours*60)*60);
-//        System.out.println(hours+" : "+minutes+" : "+seconds);
-//    }
-//
-//    public void playTimeSong (){
-//        int minutes = (durationSeconds/60);
-//        int seconds = durationSeconds-(minutes*60);
-//        System.out.println(minutes+" : "+seconds);
-//    }
-
-
-
-
-
-
-
-
     @Override
     public String toString() {
         return "MediaItem{" +

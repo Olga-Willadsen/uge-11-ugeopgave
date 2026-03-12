@@ -2,12 +2,7 @@ package opgave_1;
 
 public class AudioBook extends MediaItem implements Playable {
 
-    String author;
-
-//    AudioBook(String author){
-//        super("",0);
-//        this.author=author;
-//    }
+    private String author;
 
     AudioBook (String title, String author, int durationSeconds){
         super(title, durationSeconds);
@@ -15,17 +10,15 @@ public class AudioBook extends MediaItem implements Playable {
     }
 
     @Override
-    public boolean playTimeLongFormat (){
+    public void playTimeLongFormat (){
         int hours = (this.durationSeconds/60)/60; //23040 / 60 = 384, 384/6 = 6,4
         int minutes = (this.durationSeconds/60)-(hours*60); //384 - 6*60 360= 24
         int seconds = (this.durationSeconds-(minutes*60))-((hours*60)*60);
-        System.out.println(hours+" : "+minutes+" : "+seconds);
-        return false;
+        System.out.print(hours+" : "+minutes+" : "+seconds);
     }
 
     @Override
-    public boolean playTimeSong() {
-        return false;
+    public void playTimeSong() {
     }
 
 

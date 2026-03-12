@@ -36,17 +36,34 @@ public class MediaPlayer {
         }
     }
 
-    void printPlaylistAlternative(){
-        System.out.println("= = = PLAYLIST = = = "+ playableItems.size()+" Elements");
+//    void printPlaylistAlternative(){
+//        System.out.println("= = = PLAYLIST = = = "+ playableItems.size()+" Elements");
+//
+//        for (int i = 0; i < playableItems.size(); i++) {
+//            System.out.print((i + 1)+". " +"'"+ playableItems.get(i).getTitle()+"'");
+//            System.out.print(" - ");
+//            if (playableItems.get(i) instanceof Podcast || playableItems.get(i) instanceof AudioBook){
+//                System.out.println(playableItems.get(i).playTimeLongFormat());
+//            } else System.out.println(playableItems.get(i).playTimeSong());
+//        }
+//            System.out.println(); // if playable item instance of song playableItem.get(i).playtimesong... else..
+//    }
 
-        for (int i = 0; i < playableItems.size(); i++) {
-            System.out.print((i + 1)+". " +"'"+ playableItems.get(i).getTitle()+"'");
-            System.out.print(" - ");
-            if (playableItems.get(i) instanceof Podcast || playableItems.get(i) instanceof AudioBook){
-                System.out.println(playableItems.get(i).playTimeLongFormat());
-            } else System.out.println(playableItems.get(i).playTimeSong());
+    void print () {
+        int counter=0;
+
+        for (Playable p:playableItems){
+            counter++;
+            System.out.println(counter+". "+p.getTitle());
+            if (p instanceof Podcast || p instanceof AudioBook){
+                p.playTimeLongFormat();
+            }
+            if (p instanceof Song){
+                p.playTimeSong();
+            }
         }
-            System.out.println(); // if playable item instance of song playableItem.get(i).playtimesong... else..
+
+
     }
 
 
